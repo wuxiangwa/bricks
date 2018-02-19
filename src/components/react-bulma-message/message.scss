@@ -1,0 +1,25 @@
+.message-box {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  pointer-events: all;
+}
+
+.messages .message {
+  position: relative;
+  right: 50%;
+}
+
+.messages {
+  position: fixed;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  z-index: 1258;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  .isMiss {
+    display: none
+  }
+}

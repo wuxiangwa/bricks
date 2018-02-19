@@ -1,0 +1,15 @@
+.quill_container {
+  height: 300px;
+  background-color: white;
+}
+
+.ql-toolbar {
+  background-color: white;
+}
+
+.ql-snow .ql-tooltip[data-mode=video],
+.ql-snow .ql-tooltip[data-mode=link],
+.ql-snow .ql-tooltip[data-mode=formula] {
+  left: 20% !important;
+  top: 5% !important;
+}

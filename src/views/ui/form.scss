@@ -1,0 +1,14 @@
+@import 'bulma/sass/utilities/mixins';
+
+
+.control.has-addons {
+  @include mobile() {
+    input {
+      width: 100%;
+    }
+
+    input.is-expanded {
+      flex-shrink: 1;
+    }
+  }
+}

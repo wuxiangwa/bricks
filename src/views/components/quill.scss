@@ -1,0 +1,29 @@
+/* Set dropdown font-families */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="mirza"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="mirza"]::before {
+  content: 'Mirza';
+  font-family: "Mirza", sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="roboto"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="roboto"]::before {
+  content: 'Roboto';
+  font-family: "Roboto", sans-serif;
+}
+
+/* Set content font-families */
+.ql-font-mirza {
+  font-family: "Mirza";
+}
+.ql-font-roboto {
+  font-family: "Roboto";
+}
+
+
+
+/* Specify our own scrolling container */
+.scrolling-container {
+  height: 100%;
+  min-height: 100%;
+  overflow-y: auto;
+}
