@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import quill from 'quill';
-import {encodeBase64, uploadToServe} from './util';
+import { encodeBase64, uploadToServe } from './util';
 import 'quill/dist/quill.snow.css';
 import './reactQuill.css';
 
 import VidemoBlot from './VideoBlot';
-import ImageBlot from './ImageBlot';
+// import ImageBlot from './ImageBlot';
 // const Delta = quill.import('delta');
 
 export default class index extends Component {
@@ -68,9 +68,9 @@ export default class index extends Component {
     quillContent.innerHTML = content;
 
     // handle updata image  size
-    isUpdateImageScale && this._editor.root.addEventListener('dblclick', this.handleClick.bind(this), false);
+    isUpdateImageScale && this._editor.root.addEventListener('click', this.handleClick.bind(this), false);
 
-    console.log(<VidemoBlot/>);
+    console.log('VidemoBlot:', <VidemoBlot/>);
 
     // 创建观察者对象
     this.observer = new MutationObserver((mutationList) => {
@@ -97,10 +97,22 @@ export default class index extends Component {
   }
 
   handleClick (e) {
+    const event = e;
+    const evtTarget = e.target || e.srcElement;
+    console.log(evtTarget.tagName.toLowerCase());
+    if (evtTarget.tagName.toLowerCase() === 'img') {
+      evtTarget.addEventListener( 'dragover',(e) => {
+          console.log('dragenter:', e);
+      });
+      evtTarget.addEventListener( 'dragenter',(e) => {
+          console.log('dragenter:', e);
+      });
+    }
     if (!e.target) return;
     const handleClickCur = () => {
       const curObj = arguments[0].target;
-      if (curObj.tagName === 'IMG') {
+      if (curObj.tagName.toLowerCase() === 'img') {
+        console.log(curObj);
         let value = prompt('set the picture percentage(1~100)', curObj.style.width);
         if (!value) return;
         curObj.style.width = `${value}%`;
@@ -176,6 +188,7 @@ export default class index extends Component {
       input.click();
 
       // listen upload local image and save to serve
+      console.log(input.onchange);
       input.onchange = () => {
         const file = input.files[0];
         // file type is only image.

@@ -17,7 +17,7 @@
     "nprogress": "^0.2.0",
     "quill": "^1.3.5",
     "react": "^16.2.0",
-    "react-bulma-chartjs": "0.0.3",
+    "react-bulma-chartjs": "^0.0.6",
     "react-dom": "^16.2.0",
     "react-jump": "^0.0.9",
     "react-redux": "^5.0.6",

@@ -3,7 +3,6 @@ import '../../assets/navbar.css';
 
 class Navbar extends Component {
   render () {
-    // let { isMobile } = this.props
     return (
       <section className={'hero is-bold app-navbar animated slideInDown'}>
         <div className={'hero-head'}>

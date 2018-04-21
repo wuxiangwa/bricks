@@ -2,7 +2,6 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 // import ReduxThunk from 'redux-thunk';   // 中间件，有了这个就可以支持异步action
 import * as reducers from '../reducers'; // 所有的reducer
 
-
 // react router
 
 import { routerReducer, routerMiddleware } from 'react-router-redux'

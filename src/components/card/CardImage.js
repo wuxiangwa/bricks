@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {createClassName} from '../../utils/transform';
+import { createClassName } from '../../utils/transform';
 import Image from '../image/Image';
 
 const CardImage = ({
