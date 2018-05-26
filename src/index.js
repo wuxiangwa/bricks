@@ -7,6 +7,7 @@ import {
   ConnectedRouter
 } from 'react-router-redux';
 import App from './App';
+import Blog from './blog';
 import PrivateRoute from './PrivateRoute';
 import Login from './views/Login';
 import registerServiceWorker from './registerServiceWorker';
@@ -16,6 +17,7 @@ ReactDOM.render(
   (<Provider store={store}>
     <ConnectedRouter history={createHistory()}>
       <Switch>
+        <PrivateRoute path="/blog" component={Blog}/>
         <Route path="/login" component={Login}/>
         <PrivateRoute path="/" component={App}/>
       </Switch>

@@ -35,6 +35,7 @@ class App extends PureComponent {
   }
 
   render() {
+    // console.log(this.props);
     return (<div>
       <Navbar isMobile={this.state.isMobile}></Navbar>
       <Sidebar isMobile={this.state.isMobile} location={this.props.location}></Sidebar>

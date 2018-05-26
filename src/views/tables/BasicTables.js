@@ -1,9 +1,23 @@
 import React, {Component} from 'react';
-
-export default class BasicTables extends Component {
+import { connect } from 'react-redux';
+class BasicTables extends Component {
+  onTestAction() {
+    // console.log(this, "onTestAction");
+    // console.log(this.props);
+    const { dispatch } = this.props;
+     dispatch({type: 'TEXT'});
+  }
   render() {
     return (
-      <div>table</div>
+      <div>
+      <button className={"button is-success"} onClick={()=> this.onTestAction() }>测试</button>
+    </div>
     )
   }
 }
+
+export default connect(state => {
+  return {
+
+  }
+})(BasicTables)
