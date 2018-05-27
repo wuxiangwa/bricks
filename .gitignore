@@ -4,7 +4,9 @@
 /node_modules
 /.idea
 .env
-  
+/cli
+/scion_demo
+
 # testing
 /coverage
 
